@@ -9,7 +9,7 @@ $ mysql -u root
 ```sql
 create database cbsocialmediadb;
 create user cbsocialuser identified with mysql_native_password by 'cbsocialpass';
-grant all privileges on socialmediadb.* to cbsocialuser;
+grant all privileges on cbsocialmediadb.* to cbsocialuser;
 flush privileges;
 ```
 
