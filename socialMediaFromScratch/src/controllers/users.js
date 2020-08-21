@@ -9,6 +9,20 @@ async function createAnonUser() {
   return user;
 }
 
+async function getUserById(id) {
+  return await Users.findOne({ where: { id } });
+}
+
+async function getUserByUsername(username) {
+  return await Users.findOne({ where: { username } });
+}
+
+module.exports = {
+  createAnonUser,
+  getUserById,
+  getUserByUsername,
+};
+
 /*Test code*/
 /*
 async function task() {
