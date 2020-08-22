@@ -14,12 +14,13 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#"
+        <!-- the data component here is used in navbar.js as when it is clicked, .html file regarding the same data-component is opened -->
+        <a class="nav-link" href="#" data-component="all-posts"
           >Home <span class="sr-only">(current)</span></a
         >
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Write Posts</a>
+        <a class="nav-link" href="#" data-component="write-post">Write Posts</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">My Posts</a>
@@ -32,3 +33,5 @@
     </div>
   </div>
 </nav>
+
+<script src="../app/navbar.js"></script>
