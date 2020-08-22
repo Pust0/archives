@@ -35,13 +35,13 @@ async function task() {
   //test code for post create
   //   console.log(
   //     await createNewPost (
-  //         "1",
+  //         1,
   //         "This is a sample post", 
   //         "body of the post goes here")
   //   ),
   //     console.log(
   //       await createNewPost(
-  //         "1",
+  //         2,
   //         "Another sample post",
   //         "Another sample body of the post"
   //       )

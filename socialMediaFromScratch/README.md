@@ -15,12 +15,24 @@
 
 ## Project Structure
 
+### Backend (server)
+
 ```
 src
 ├───controllers         #
 ├───db                  # db connection and model definitions
 ├───public              # html/js/css files for static part
 └───routes              # express middlewares (route wise)
+```
+
+### Frontend (Client Side Code)
+
+```
+src/public
+├───app                 # our own js frontend code
+├───components          # our own html snippets
+├───css                 # CSS lib we are using
+└───js                  # JS lib we are using
 ```
 
 ## Business Logic
@@ -56,3 +68,36 @@ src
 2. **show all comments (under a post)**
 
 3. **add a comment**
+
+## API documentation
+
+### `users`
+
+1. `POST /users`
+
+Creates a new user with a random username and user Id
+
+2. `GET /users/{userId}`
+
+Get an user with a given userId
+
+3. `GET /users/{username}`
+
+Get an user with a given username
+
+### `posts`
+
+1. `GET /posts/`
+
+Get all the posts by everyone
+
+2. `POST /posts/`
+
+Create a new post
+Required fields in body:
+
+```
+userId=
+title=
+body=
+```
