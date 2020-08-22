@@ -5,7 +5,7 @@ const {
   getUserByUsername,
 } = require("../../controllers/users");
 
-const route = new Router();
+const route = Router();
 
 route.get("/:id", async (req, res) => {
   let user;

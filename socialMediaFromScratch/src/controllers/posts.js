@@ -1,7 +1,8 @@
 const { Posts, Users } = require("../db/models");
 
-async function createNewPost(title, body) {
+async function createNewPost(userId, title, body) {
   const post = await Posts.create({
+    userId,
     title,
     body,
   });
@@ -14,7 +15,7 @@ async function createNewPost(title, body) {
  *showAllPosts({title: ''})
  */
 
-async function showAllPosts(query) {
+async function findAllPosts(query) {
   //TODO: Handle query params
   const posts = await Posts.findAll({
     include: [Users], //this can only be done if there is a relationship b/w whatever you want to include and the thing your using it from
@@ -25,7 +26,7 @@ async function showAllPosts(query) {
 
 module.exports = {
   createNewPost,
-  showAllPosts,
+  findAllPosts,
 };
 
 /*Test code*/
@@ -33,10 +34,14 @@ module.exports = {
 async function task() {
   //test code for post create
   //   console.log(
-  //     await createNewPost("This is a sample post", "body of the post goes here")
+  //     await createNewPost (
+  //         "1",
+  //         "This is a sample post", 
+  //         "body of the post goes here")
   //   ),
   //     console.log(
   //       await createNewPost(
+  //         "1",
   //         "Another sample post",
   //         "Another sample body of the post"
   //       )

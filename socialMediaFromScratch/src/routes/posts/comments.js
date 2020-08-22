@@ -1,6 +1,6 @@
 const { Router } = require("express");
 
-const route = new Router();
+const route = Router();
 
 module.exports = {
   commentsRoute: route,
